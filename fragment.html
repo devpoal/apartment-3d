@@ -1,0 +1,35 @@
+<div id="apartment-736">
+  <style>
+    #apartment-736{display:grid;gap:calc(var(--font-size-base,14px)*.7);color:var(--foreground,#313b36);font-family:Arial,sans-serif}
+    #apartment-736 .apartment-toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:end;padding-right:95px}
+    #apartment-736 .apartment-field{display:grid;gap:4px;min-width:145px;flex:1}
+    #apartment-736 .apartment-buttons{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+    #apartment-736 [data-stage]{height:535px;position:relative;touch-action:none;overflow:hidden}
+    #apartment-736 canvas{display:block;width:100%;height:100%}
+    #apartment-736 .apartment-label{position:absolute;transform:translate(-50%,-50%);white-space:nowrap}
+    #apartment-736 .apartment-label[hidden]{display:none}
+    #apartment-736 .apartment-footer{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+    #apartment-736 [data-detail]{min-height:2.8em}
+    @media(max-width:500px){#apartment-736 [data-stage]{height:390px}#apartment-736 .apartment-toolbar{padding-right:0}#apartment-736 .apartment-label{display:none}}
+  </style>
+  <div class="apartment-toolbar">
+    <label class="apartment-field form-label">Помещение
+      <select class="form-select" data-room-select>
+        <option value="all">Вся квартира</option><option value="living">Кухня-гостиная</option><option value="kitchen">Кухня крупно</option><option value="nursery">Детская</option><option value="hall">Прихожая</option><option value="wardrobe">Гардеробная</option><option value="bathroom">Санузел</option>
+      </select>
+    </label>
+  </div>
+  <div class="apartment-buttons">
+    <button class="btn" type="button" data-view="3d" aria-pressed="true">Объёмный вид</button>
+    <button class="btn" type="button" data-view="plan" aria-pressed="false">Вид сверху</button>
+    <button class="btn" type="button" data-zoom-in aria-label="Приблизить">＋</button><button class="btn" type="button" data-zoom-out aria-label="Отдалить">−</button>
+  </div>
+  <div data-stage></div>
+  <div class="apartment-footer">
+    <label class="form-check"><input class="form-check-input" type="checkbox" data-cut checked><span class="form-check-label">Стены в разрезе</span></label>
+    <label class="form-check"><input class="form-check-input" type="checkbox" data-labels checked><span class="form-check-label">Названия комнат</span></label>
+    <label class="form-check"><input class="form-check-input" type="checkbox" data-wardrobe-open><span class="form-check-label">Открыть гардеробную</span></label>
+    <span class="text-small">Поворот — перетаскиванием · масштаб — колесом</span>
+  </div>
+  <p data-detail aria-live="polite">43,2 м² · потолок 2,70 м · выберите предмет, чтобы посмотреть размеры</p>
+</div>

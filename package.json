@@ -1,0 +1,14 @@
+{
+  "name": "apartment-3d",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive 3D apartment layout",
+  "scripts": {
+    "build": "node build.cjs",
+    "test": "node build.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}
